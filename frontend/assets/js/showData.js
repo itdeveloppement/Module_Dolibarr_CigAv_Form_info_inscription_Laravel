@@ -1,11 +1,10 @@
 const showData = {
 
-    init: function(id) {
-        documùent.write("teste");
+    init: function(id) {     
         // recuperation des donnéers de la bdd (bulletin et participants)
         fetch(`http://localhost:8000/api/inscriptions/${id}`,)
 
-        590001844
+        // 590001844
             .then( function(response) {
                 return response.json();
             })
