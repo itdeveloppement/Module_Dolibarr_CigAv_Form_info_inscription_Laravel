@@ -73,16 +73,24 @@
                     </div>    
                     -->  
             </div>
-        </form>  
-
+        </form>
+          
         <div>
                 <?php include "template/modal.php"; ?>
                 <?php include "template/footer.php"; ?>
         </div>
+        
     </div>
-       
+
+        <!-- defer en laravel = diferer l'execution du js 
+        <script src="{{ asset('js/showData.js') }}" defer></script>
+        <script src="{{ asset('js/showDropDown.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>  -->
+        
+        
         <script src="../assets/js/showData.js"></script>
         <script src="../assets/js/showDropDown.js"></script>
-        <script src="../assets/js/app.js"></script>
+        <script src="../assets/js/app.js"></script> 
+       
 
-        
+    
