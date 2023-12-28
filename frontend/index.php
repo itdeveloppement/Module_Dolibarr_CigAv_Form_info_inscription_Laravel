@@ -1,5 +1,18 @@
 
-<?php include "template/header.php"; ?>
+<?php 
+
+// pour le serveur hébergé
+header('Access-Control-Allow-Origin: https://fourmitest2.cigaleaventure.com');
+
+// Pour le local
+//header('Access-Control-Allow-Origin: https://localhost/doliDev');
+
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Authorization');
+
+include "template/header.php"; 
+
+echo "test index";?>
 
 
 <body>
@@ -48,7 +61,7 @@
             <!--  modification BDD / affichage sur tous les ecrans   -->
                
             <div class="affichageParticipant">
-             <div class="text_titre_ecran">Participant1</div>
+            <!-- <div class="text_titre_ecran">Participant1</div>
                     <div  class="div5b">
                 
                         <div class="div5a">
@@ -63,7 +76,7 @@
                         <div class="div5bc">
                             <div id="poids" class="champ_participant"></div>
                         </div> 
-                    <!-- bouton de supression ou modification d'un participant -->  
+                    bouton de supression ou modification d'un participant   
                         <div id="boutonMod" class="div5bd champ_participant">                    
                             <buttom class="boutons">Mod</buttom>   
                         </div>  
@@ -71,25 +84,18 @@
                                 <buttom class="boutons">Sup</buttom>    
                         </div> 
                     </div>    
-                     
+                    -->  
             </div>
-        </form>
-          
+        </form>  
+
         <div>
-                 <?php include "template/modal.php"; ?>
+                <?php include "template/modal.php"; ?>
                 <?php include "template/footer.php"; ?>
         </div>
-        
     </div>
-
-        <!-- defer en laravel = diferer l'execution du js 
-        <script src="{{ asset('js/showData.js') }}" defer></script>
-        <script src="{{ asset('js/showDropDown.js') }}" defer></script>
-        <script src="{{ asset('js/app.js') }}" defer></script>  -->
-        
+       
         <script src="assets/js/showData.js"></script>
         <script src="assets/js/showDropDown.js"></script>
-        <script src="assets/js/app.js"></script> 
-       
+        <script src="assets/js/app.js"></script>
 
-    
+        

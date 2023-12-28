@@ -1,11 +1,21 @@
 const showData = {
 
-    init: function(id) {     
-        // recuperation des donnéers de la bdd (bulletin et participants)
-        fetch(`http://localhost:8000/api/inscriptions/${id}`,)
-
-        // 590001844
-            .then( function(response) {
+    init: function(id) {
+        
+       // recuperation des donnéers de la bdd (bulletin et participants)
+               // Pour installation sur machine virtuelle école
+               fetch(`http://localhost:8000/api/inscriptions/${id}`,)
+       
+               // Pour installation sur serveur heberge
+                //fetch(`http://fourmitest2.cigaleaventure.com/custom/cglinscription/public/Laravel/backend/routes/api/inscriptions/${id}`,
+               
+               // Pour installation en local
+                //fetch(`http://localhost/doliDev/custom/cglinscription/public/Laravel/backend/routes/api/inscriptions/${id}`,
+                
+               // A tester si endpoint correctement paramétrer
+                //fetch(`api/inscriptions/${id}`,               
+     
+.then( function(response) {
                 return response.json();
             })
             .then(function(bulletin) {
